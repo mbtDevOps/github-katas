@@ -2,7 +2,7 @@ name: Main workflow
 on: push
 env:
   docker_username: mbtdevops
-  docker_password: DevOpsAc9
+  docker_password: ${{secrets.GITHUB_TOKEN}}
   GIT_COMMIT: ${{github.sha}}
 jobs:
   Build:
